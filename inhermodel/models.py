@@ -2,6 +2,9 @@ from django.db import models
 
 class TopLevel(models.Model):
     name = models.CharField(max_length=200)
+    choice = models.IntegerField("and now a choice", choices = (
+        (1, 'Hindcasting'), (2, 'Cross validation'),
+        (3, 'First principles'), (4, 'Treatment of uncertainties'), ))
 
     def clean(self):
         pass
