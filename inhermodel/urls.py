@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from inhermodel import views
 admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:
@@ -16,6 +17,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^item/(?P<pk>\d+)/$', views.jsonno),
     # url('^$', views.ListBlocksView.as_view(), name='blocks-list'),
     # url('^blocks/new$', views.CreateBlockView.as_view(), name='blocks-new'),
     # url('^blocks/(?P<pk>\d+)/$', views.EditBuildingsView.as_view(),
