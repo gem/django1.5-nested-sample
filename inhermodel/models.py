@@ -16,6 +16,7 @@ class TopLevel(models.Model):
 class LevelOne(models.Model):
     name = models.CharField(max_length=200)
     level = models.OneToOneField('TopLevel', related_name = "level_one")
+
 #    level = models.ForeignKey('TopLevel', related_name = "level_one")
 
 class LevelOneBi(models.Model):

@@ -35,6 +35,10 @@ class TopLevelAdmin(NestedModelAdmin):
     model = TopLevel
     inlines = [LevelOneInline, LevelOneBiInline]
 
+    class Media:
+        js = ("inhermodel.js", )
+
+
     def cross_validate(self, form, formsets):
 	print "Cross_validate is here"
         # print dir(formsets)
