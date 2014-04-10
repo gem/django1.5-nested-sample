@@ -17,6 +17,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^chainedselectchoices$',
+        views.ChainedSelectChoices.as_view(),
+        name = 'chained_select_choices'),
     url(r'^item/(?P<pk>\d+)/$', views.jsonno),
     # url('^$', views.ListBlocksView.as_view(), name='blocks-list'),
     # url('^blocks/new$', views.CreateBlockView.as_view(), name='blocks-new'),

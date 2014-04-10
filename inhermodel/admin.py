@@ -1,6 +1,7 @@
 from django.contrib import admin
 from nested_inlines.admin import NestedStackedInline, NestedModelAdmin
 from inhermodel.models import *
+from inhermodel.forms import StandardModelTwoForm
 
 class LevelThreeInline(NestedStackedInline):
     model = LevelThree
@@ -16,13 +17,16 @@ class LevelTwoInline(NestedStackedInline):
     fk_name = 'level'
     inlines = [LevelThreeInline]
 
+class StandardModelTwoInline(NestedStackedInline):
+    model = StandardModelTwo
+    form = StandardModelTwoForm
 
 class LevelOneInline(NestedStackedInline):
     model = LevelOne
     max_num = 1
     extra = 1
     fk_name = 'level'
-    inlines = [LevelTwoInline]
+    inlines = [LevelTwoInline, StandardModelTwoInline]
 
 class LevelOneBiInline(NestedStackedInline):
     model = LevelOneBi

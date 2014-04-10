@@ -53,6 +53,13 @@ function top_level_manager(is_enabled) {
     var choice;
 
     choice = $( "#"+form_name+"_form select[id=id_choice] option:selected" ).text();
+    if (choice == "Hindcasting") {
+        // alert("di qui: "+$("#"+form_name+"_form input[id=id_name]")[0]);
+        $("#"+form_name+"_form input[id=id_name]")[0].readOnly = true;
+    }
+    else {
+        $("#"+form_name+"_form input[id=id_name]")[0].readOnly = false;
+    }
     $( "#"+form_name+"_form select[id=id_choice]" ).change(function () { top_level_manager(true) });
 
     level_one_manager("", choice == "Hindcasting");

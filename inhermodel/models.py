@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class TopLevel(models.Model):
     name = models.CharField(max_length=200)
     choice = models.IntegerField("and now a choice", choices = (
@@ -18,6 +19,13 @@ class LevelOne(models.Model):
     level = models.OneToOneField('TopLevel', related_name = "level_one")
 
 #    level = models.ForeignKey('TopLevel', related_name = "level_one")
+
+class StandardModelTwo(models.Model):
+    parent_model = models.ForeignKey('LevelOne')
+    field_one = models.CharField(max_length=255)
+    field_two = models.CharField(max_length=255)
+    field_three = models.CharField(max_length=255)
+
 
 class LevelOneBi(models.Model):
     name_bi = models.CharField(max_length=200)

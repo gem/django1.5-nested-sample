@@ -1,0 +1,9 @@
+DEPENDENCIES:
+
+django-chained-selectbox==0.1
+-e git+https://github.com/silverfix/django-nested-inlines@ba430607c97640b729a6e91cdbac8fb403dae3ac#egg=django_nested_inlines-dev
+
+ALL TESTS ON:
+
+Django 1.5.5
+
