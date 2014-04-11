@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from inhermodel import views
+from nested_sample import views
 admin.autodiscover()
 
 # Uncomment the next two lines to enable the admin:

@@ -1,6 +1,6 @@
 from django.http import Http404, HttpResponse
 from django.shortcuts import render_to_response
-from inhermodel.models import TopLevel
+from nested_sample.models import TopLevel
 from django.core import serializers
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils.cache import add_never_cache_headers

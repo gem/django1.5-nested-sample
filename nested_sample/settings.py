@@ -1,4 +1,4 @@
-# Django settings for inhermodel project.
+# Django settings for nested_sample project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -16,7 +16,7 @@ SERIALIZATION_MODULES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'inhermodel.db',                      # Or path to database file if using sqlite3.
+        'NAME': 'nested_sample.db',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -106,10 +106,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'inhermodel.urls'
+ROOT_URLCONF = 'nested_sample.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'inhermodel.wsgi.application'
+WSGI_APPLICATION = 'nested_sample.wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -129,7 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'inhermodel',
+    'nested_sample',
 )
 
 # A sample logging configuration. The only tangible logging

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from nested_inlines.admin import NestedStackedInline, NestedModelAdmin
-from inhermodel.models import *
-from inhermodel.forms import StandardModelTwoForm
+from nested_sample.models import *
+from nested_sample.forms import StandardModelTwoForm
 
 class LevelThreeInline(NestedStackedInline):
     model = LevelThree
@@ -40,7 +40,7 @@ class TopLevelAdmin(NestedModelAdmin):
     inlines = [LevelOneInline, LevelOneBiInline]
 
     class Media:
-        js = ("inhermodel.js", )
+        js = ("nested_sample.js", )
 
 
     def cross_validate(self, form, formsets):

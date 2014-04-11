@@ -1,6 +1,6 @@
 from chained_selectbox.forms import ChainedChoicesForm
 from django import forms
-from inhermodel.models import StandardModelTwo
+from nested_sample.models import StandardModelTwo
 from chained_selectbox.form_fields import ChainedChoiceField
 
 class StandardModelTwoForm(ChainedChoicesForm):
